@@ -14,8 +14,12 @@ import '/_common.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-abstract base class DataStreamService<TData extends Object> extends WidgetsBindingObserver
-    with ServiceMixin, StreamServiceMixin<TData>, HandleServiceLifecycleStateMixin {
+abstract base class DataStreamService<TData extends Object>
+    extends WidgetsBindingObserver
+    with
+        ServiceMixin,
+        StreamServiceMixin<TData>,
+        HandleServiceLifecycleStateMixin {
   //
   //
   //

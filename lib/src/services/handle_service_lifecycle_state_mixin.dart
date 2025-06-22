@@ -21,7 +21,7 @@ mixin HandleServiceLifecycleStateMixin on WidgetsBindingObserver, ServiceMixin {
   //
   //
   //
-  
+
   bool handlePausedState() => false;
 
   bool handleResumedState() => false;
@@ -43,9 +43,7 @@ mixin HandleServiceLifecycleStateMixin on WidgetsBindingObserver, ServiceMixin {
         if (handlePausedState()) {
           consec(resume().value, (result) {
             if (result.isErr()) {
-              Log.err(
-                'pause() failed on ${AppLifecycleState.paused.name}!',
-              );
+              Log.err('pause() failed on ${AppLifecycleState.paused.name}!');
               assert(false, result.err().unwrap());
             }
           });
@@ -55,9 +53,7 @@ mixin HandleServiceLifecycleStateMixin on WidgetsBindingObserver, ServiceMixin {
         if (handleResumedState()) {
           consec(resume().value, (result) {
             if (result.isErr()) {
-              Log.err(
-                'resume() failed on ${AppLifecycleState.resumed.name}!',
-              );
+              Log.err('resume() failed on ${AppLifecycleState.resumed.name}!');
               assert(false, result.err().unwrap());
             }
           });
@@ -67,9 +63,7 @@ mixin HandleServiceLifecycleStateMixin on WidgetsBindingObserver, ServiceMixin {
         if (handleHiddenState()) {
           consec(pause().value, (result) {
             if (result.isErr()) {
-              Log.err(
-                'pause() failed on ${AppLifecycleState.hidden.name}!',
-              );
+              Log.err('pause() failed on ${AppLifecycleState.hidden.name}!');
               assert(false, result.err().unwrap());
             }
           });
@@ -79,9 +73,7 @@ mixin HandleServiceLifecycleStateMixin on WidgetsBindingObserver, ServiceMixin {
         if (handleInactiveState()) {
           consec(pause().value, (result) {
             if (result.isErr()) {
-              Log.err(
-                'pause() failed on ${AppLifecycleState.inactive.name}!',
-              );
+              Log.err('pause() failed on ${AppLifecycleState.inactive.name}!');
               assert(false, result.err().unwrap());
             }
           });
