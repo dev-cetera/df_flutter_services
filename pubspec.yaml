@@ -16,7 +16,7 @@ repository: https://github.com/robmllze/df_flutter_services
 funding:
   - https://www.buymeacoffee.com/dev_cetera
 description: Includes service classes for Flutter to help with state management.
-version: 0.1.1
+version: 0.1.2
 topics:
   - services
   - state-management
