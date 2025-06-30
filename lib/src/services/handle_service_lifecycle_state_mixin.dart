@@ -38,6 +38,7 @@ mixin HandleServiceLifecycleStateMixin on WidgetsBindingObserver, ServiceMixin {
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
+    UNSAFE:
     switch (state) {
       case AppLifecycleState.paused:
         if (handlePausedState()) {
