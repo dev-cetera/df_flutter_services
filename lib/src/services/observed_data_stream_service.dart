@@ -14,8 +14,7 @@ import '/_common.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-abstract class ObservedDataStreamService<TData extends Object>
-    extends WidgetsBindingObserver
+abstract class ObservedDataStreamService<TData extends Object> extends WidgetsBindingObserver
     with
         ServiceMixin,
         StreamServiceMixin<TData>,
@@ -42,7 +41,7 @@ mixin ObservedDataStreamServiceMixin<TData extends Object>
 
   @mustCallSuper
   @override
-  provideInitListeners(void _) {
+  TServiceResolvables<Unit> provideInitListeners(void _) {
     return [
       ...super.provideInitListeners(null),
       (_) {
@@ -54,7 +53,7 @@ mixin ObservedDataStreamServiceMixin<TData extends Object>
 
   @mustCallSuper
   @override
-  provideDisposeListeners(void _) {
+  TServiceResolvables<Unit> provideDisposeListeners(void _) {
     return [
       (_) {
         pData.dispose();
@@ -66,7 +65,7 @@ mixin ObservedDataStreamServiceMixin<TData extends Object>
 
   @mustCallSuper
   @override
-  provideOnPushToStreamListeners() {
+  TServiceResolvables<Result<TData>> provideOnPushToStreamListeners() {
     return [
       (data) {
         pData.set(Some(data));

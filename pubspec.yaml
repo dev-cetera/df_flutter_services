@@ -18,7 +18,7 @@ funding:
 - https://www.patreon.com/c/RobertMollentze
 - https://github.com/sponsors/robmllze
 description: Includes service classes for Flutter to help with state management.
-version: 0.1.5
+version: 0.1.6
 topics:
   - services
   - state-management
@@ -35,7 +35,7 @@ dependencies:
   flutter:
     sdk: flutter
     
-  df_di: ^0.15.2
+  df_di: ^0.15.3
   df_pod: ^0.18.10
   df_safer_dart: ^0.17.3
   df_log: ^0.3.20
