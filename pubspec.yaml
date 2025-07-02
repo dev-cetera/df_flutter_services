@@ -34,6 +34,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+    
   df_di: ^0.15.2
   df_pod: ^0.18.10
   df_safer_dart: ^0.17.0
