@@ -18,7 +18,7 @@ funding:
 - https://www.patreon.com/c/RobertMollentze
 - https://github.com/sponsors/robmllze
 description: Includes service classes for Flutter to help with state management.
-version: 0.1.4
+version: 0.1.5
 topics:
   - services
   - state-management
