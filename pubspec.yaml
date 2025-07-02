@@ -14,7 +14,9 @@ name: df_flutter_services
 homepage: https://dev-cetera.com/
 repository: https://github.com/robmllze/df_flutter_services
 funding:
-  - https://www.buymeacoffee.com/dev_cetera
+- https://www.buymeacoffee.com/dev_cetera
+- https://www.patreon.com/c/RobertMollentze
+- https://github.com/sponsors/robmllze
 description: Includes service classes for Flutter to help with state management.
 version: 0.1.4
 topics:
@@ -32,10 +34,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  df_di: ^0.15.1
-  df_pod: ^0.18.8
-  df_safer_dart: ^0.16.2
-  df_log: ^0.3.19
+  df_di: ^0.15.2
+  df_pod: ^0.18.10
+  df_safer_dart: ^0.17.0
+  df_log: ^0.3.20
   df_type: ^0.14.2
 
 ## -----------------------------------------------------------------------------
