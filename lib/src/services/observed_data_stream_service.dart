@@ -14,8 +14,7 @@ import '/_common.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-abstract class ObservedDataStreamService<TData extends Object>
-    extends WidgetsBindingObserver
+abstract class ObservedDataStreamService<TData extends Object> extends WidgetsBindingObserver
     with
         ServiceMixin,
         StreamServiceMixin<TData>,
@@ -34,7 +33,7 @@ mixin ObservedDataStreamServiceMixin<TData extends Object>
   //
   //
 
-  final pData = Pod<Option<Result<TData>>>(const None());
+  final RootPod<Option<Result<TData>>> pData = Pod<Option<Result<TData>>>(const None());
 
   //
   //
