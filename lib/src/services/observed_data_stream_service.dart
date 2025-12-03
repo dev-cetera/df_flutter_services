@@ -32,8 +32,9 @@ mixin ObservedDataStreamServiceMixin<TData extends Object>
   //
   //
 
-  final RootPod<Option<Result<TData>>> pData =
-      Pod<Option<Result<TData>>>(const None());
+  final RootPod<Option<Result<TData>>> pData = Pod<Option<Result<TData>>>(
+    const None(),
+  );
 
   //
   //
