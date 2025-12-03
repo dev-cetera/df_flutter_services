@@ -15,13 +15,11 @@ import '/_common.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-abstract class ObservedPollingStreamService<TData extends Object> extends WidgetsBindingObserver
+abstract class ObservedPollingStreamService<TData extends Object>
+    extends ObservedService
     with
-        ServiceMixin,
         StreamServiceMixin<TData>,
         PollingStreamServiceMixin<TData>,
         HandleServiceLifecycleStateMixin {
-  ObservedPollingStreamService() {
-    WidgetsBinding.instance.addObserver(this);
-  }
+  ObservedPollingStreamService() : super();
 }

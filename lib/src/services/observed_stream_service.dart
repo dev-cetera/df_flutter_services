@@ -15,9 +15,8 @@ import '/_common.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-abstract class ObservedStreamService<TData extends Object> extends WidgetsBindingObserver
-    with ServiceMixin, StreamServiceMixin<TData>, HandleServiceLifecycleStateMixin {
-  ObservedStreamService() {
-    WidgetsBinding.instance.addObserver(this);
-  }
+abstract class ObservedStreamService<TData extends Object>
+    extends ObservedService
+    with StreamServiceMixin<TData>, HandleServiceLifecycleStateMixin {
+  ObservedStreamService() : super();
 }

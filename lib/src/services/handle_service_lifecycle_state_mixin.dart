@@ -13,6 +13,7 @@
 
 import 'package:df_di/df_di.dart';
 import 'package:df_log/df_log.dart';
+import 'package:df_safer_dart/_common.dart';
 
 import 'package:flutter/widgets.dart';
 
@@ -23,14 +24,19 @@ mixin HandleServiceLifecycleStateMixin on WidgetsBindingObserver, ServiceMixin {
   //
   //
 
+  @visibleForOverriding
   bool handlePausedState() => false;
 
+  @visibleForOverriding
   bool handleResumedState() => false;
 
+  @visibleForOverriding
   bool handleHiddenState() => false;
 
+  @visibleForOverriding
   bool handleInactiveState() => false;
 
+  @visibleForOverriding
   bool handleDetachedState() => false;
 
   //

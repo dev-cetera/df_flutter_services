@@ -20,4 +20,16 @@ abstract class ObservedService extends WidgetsBindingObserver
   ObservedService() {
     WidgetsBinding.instance.addObserver(this);
   }
+
+  @override
+  @mustCallSuper
+  TServiceResolvables<Unit> provideDisposeListeners(void _) {
+    return [
+      (_) {
+        final didRemove = WidgetsBinding.instance.removeObserver(this);
+        assert(didRemove);
+        return syncUnit();
+      },
+    ];
+  }
 }

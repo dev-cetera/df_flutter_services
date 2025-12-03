@@ -15,15 +15,13 @@ import '/_common.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-abstract class ObservedDataStreamService<TData extends Object> extends WidgetsBindingObserver
+abstract class ObservedDataStreamService<TData extends Object>
+    extends ObservedService
     with
-        ServiceMixin,
         StreamServiceMixin<TData>,
         ObservedDataStreamServiceMixin<TData>,
         HandleServiceLifecycleStateMixin {
-  ObservedDataStreamService() {
-    WidgetsBinding.instance.addObserver(this);
-  }
+  ObservedDataStreamService() : super();
 }
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -34,7 +32,8 @@ mixin ObservedDataStreamServiceMixin<TData extends Object>
   //
   //
 
-  final RootPod<Option<Result<TData>>> pData = Pod<Option<Result<TData>>>(const None());
+  final RootPod<Option<Result<TData>>> pData =
+      Pod<Option<Result<TData>>>(const None());
 
   //
   //
