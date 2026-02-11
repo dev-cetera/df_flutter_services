@@ -79,13 +79,10 @@ final class StockPriceService extends StreamService<double> {
   @override
   Stream<Result<double>> provideInputStream() {
     // Simulate a stock price stream
-    return Stream.periodic(
-      const Duration(seconds: 1),
-      (count) {
-        final price = 100.0 + (count % 10) * 0.5;
-        return Ok(price);
-      },
-    );
+    return Stream.periodic(const Duration(seconds: 1), (count) {
+      final price = 100.0 + (count % 10) * 0.5;
+      return Ok(price);
+    });
   }
 
   @override
