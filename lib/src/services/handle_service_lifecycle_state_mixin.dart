@@ -49,7 +49,7 @@ mixin HandleServiceLifecycleStateMixin on WidgetsBindingObserver, ServiceMixin {
     switch (state) {
       case AppLifecycleState.paused:
         if (handlePausedState()) {
-          consec(resume().value, (result) {
+          consec(pause().value, (result) {
             if (result.isErr()) {
               Log.err('pause() failed on ${AppLifecycleState.paused.name}!');
               assert(false, result.err().unwrap());

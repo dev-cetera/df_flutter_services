@@ -27,7 +27,12 @@ abstract class ObservedService extends WidgetsBindingObserver
     return [
       (_) {
         final didRemove = WidgetsBinding.instance.removeObserver(this);
-        assert(didRemove);
+        if (!didRemove) {
+          Log.err(
+            'Failed to remove WidgetsBindingObserver during dispose. '
+            'Observer may have already been removed or was never registered.',
+          );
+        }
         return syncUnit();
       },
     ];
