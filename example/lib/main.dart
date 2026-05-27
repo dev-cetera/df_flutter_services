@@ -168,15 +168,13 @@ Future<void> main() async {
   // --- DI Integration Demo ---
   print('\n--- DI Integration ---');
 
-  // Register with DI
-  DI.global.register<CounterService>(
-    CounterService(),
-    onRegister: (service) => service.init(),
-    onUnregister: ServiceMixin.unregister, // Calls dispose() automatically
-  );
+  // Register with DI (registerAndInitService chains init() automatically and
+  // disposes the service on unregister).
+  DI.global.registerAndInitService<CounterService>(CounterService());
 
   // Access and use the service
-  final diCounter = await DI.global.untilSuper<CounterService>().unwrap();
+  final resolved = await DI.global.untilSuper<CounterService>().value;
+  final diCounter = UNSAFE(() => resolved.unwrap());
   diCounter.increment();
   diCounter.increment();
   print('DI Counter value: ${diCounter.count}');

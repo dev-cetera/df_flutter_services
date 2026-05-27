@@ -1,9 +1,10 @@
 # Changelog
 
-## [0.1.8]
+## [0.2.0]
 
-- Released @ 2/2026 (UTC)
-- Minor bugfixes
+- Released @ 5/2026 (UTC)
+- Bump dependency constraints: df_di ^0.15.11, df_pod ^0.19.1, df_safer_dart ^0.17.9, df_log ^0.4.0 (previous constraints were incompatible with currently-published versions of df_pod and df_log).
+- Add `test/` coverage for `ObservedDataStreamService` and `HandleServiceLifecycleStateMixin`.
 
 ## [0.1.7]
 
