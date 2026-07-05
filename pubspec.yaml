@@ -19,7 +19,7 @@ funding:
   - https://www.patreon.com/c/robelator
   - https://github.com/sponsors/robelator
 description: Includes service classes for Flutter to help with state management.
-version: 0.2.0
+version: 0.2.1
 topics:
   - services
   - state-management
@@ -36,10 +36,10 @@ dependencies:
   flutter:
     sdk: flutter
 
-  df_di: ^0.16.1
+  df_di: ^0.16.2
   df_pod: ^0.20.0
   df_safer_dart: ^0.21.0
-  df_log: ^0.5.1
+  df_log: ^0.6.1
   df_type: ^0.16.0
 
 ## -----------------------------------------------------------------------------

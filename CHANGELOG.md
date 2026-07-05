@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.2.1]
+
+- Update dependencies
+
 ## [0.2.0]
 
 - Released @ 5/2026 (UTC)
